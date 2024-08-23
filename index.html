@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Danger of a Single Story</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            scroll-snap-align: start;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .section h1 {
+            font-size: 4rem;
+            color: #00BFFF;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            color: #00BFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #E0E0E0;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 3;
+        }
+
+        nav a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #00BFFF;
+            color: #000;
+        }
+
+        #landing-page {
+            background-image: url('path-to-your-image'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        #the-danger-of-a-single-story {
+            background-image: url('path-to-your-image'); /* Replace with your image path */
+            background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
+            background-blend-mode: darken;
+            color: #FFFFFF;
+        }
+
+        #everyday-use {
+            background-image: url('path-to-your-image'); /* Replace with your image path */
+            background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
+            background-blend-mode: darken;
+            color: #FFFFFF;
+        }
+
+        #legacies {
+            background-image: url('path-to-your-image'); /* Replace with your image path */
+            background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
+            background-blend-mode: darken;
+            color: #FFFFFF;
+        }
+
+        #conclusion {
+            background-image: url('path-to-your-image'); /* Replace with your image path */
+            background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
+            background-blend-mode: darken;
+            color: #FFFFFF;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #00BFFF;
+            color: #000;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 2s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section img {
+            max-width: 50%;
+            max-height: 50%; /* Set a max height for the images */
+            width: auto;
+            height: auto;
+            margin-top: 10vh;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            object-fit: cover; /* Ensure the aspect ratio is maintained */
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Fade-in animation for sections */
+        .section {
+            opacity: 0;
+            animation: fadeInSection 1.5s ease forwards;
+        }
+
+        @keyframes fadeInSection {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#landing-page">Home</a>
+        <a href="#the-danger-of-a-single-story">Single Story</a>
+        <a href="#everyday-use">Everyday Use</a>
+        <a href="#legacies">Legacies</a>
+        <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <section id="landing-page" class="section">
+        <div class="container">
+            <h1>Discover the Power of Stories</h1>
+            <p>Presented by Abhirama Sonny, Claire Xiangling Yin, Thalia Hsu, Christian Cruces</p>
+        </div>
+    </section>
+
+    <section id="the-danger-of-a-single-story" class="section parallax">
+        <div class="container">
+            <h2>Understanding a Single Story</h2>
+            <p>Chimamanda Ngozi Adichie’s TED Talk illuminates the pitfalls of viewing the world through a single lens. She recounts personal experiences that reveal how narrowly focused stories can form and cement stereotypes.</p>
+            <img src="https://pi.tedcdn.com/r/talkstar-photos.s3.amazonaws.com/uploads/bb99ace3-e8b8-4ef7-ad1e-58ffc049a60f/ChimamandaNgoziAdichie_2012X-embed.jpg?u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82w=640" alt="Chimamanda Ngozi Adichie speaking">
+        </div>
+    </section>
+
+    <section id="everyday-use" class="section parallax">
+        <div class="container">
+            <h2>Appreciating Heritage in Everyday Use</h2>
+            <p>Alice Walker’s short story explores the significance of cultural heritage and its role in family connections. Through the contrasting characters of Dee and Maggie, the story delves into themes of identity, heritage, and the bonds that tie us to our past.</p>
+            <img src="fotor-ai-2024082222101.jpg" alt="A scene representing heritage">
+        </div>
+    </section>
+
+    <section id="legacies" class="section parallax">
+        <div class="container">
+            <h2>Legacies: A Poetic Reflection</h2>
+            <p>Nikki Giovanni’s poem “Legacies” captures the essence of intergenerational relationships and the unspoken bonds that exist within families. It speaks to the importance of preserving memories and the complex emotions that come with growing up and growing old.</p>
+            <img src="fotor-ai-20240822221218.jpg" alt="Poetic image of family bonds">
+        </div>
+    </section>
+
+    <section id="conclusion" class="section parallax">
+        <div class="container">
+            <h2>Embracing Diverse Narratives</h2>
+            <p>As we explore these narratives, we are reminded of the power and responsibility we hold in telling stories. Whether it's through literature, poetry, or personal accounts, the stories we share shape the way we view the world and each other.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The Danger of a Single Story. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add smooth scroll effect to navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in effect when sections come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.3s';
+                    entry.target.style.animationDuration = '1.5s';
+                    entry.target.classList.add('fade-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
